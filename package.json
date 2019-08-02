@@ -1,0 +1,23 @@
+{
+  "name": "tla-keycloak-adapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbhayden/tla-keycloak-adapter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbhayden/tla-keycloak-adapter/issues"
+  },
+  "homepage": "https://github.com/vbhayden/tla-keycloak-adapter#readme",
+  "dependencies": {
+    "express-session": "^1.16.2",
+    "keycloak-connect": "^6.0.1"
+  }
+}
