@@ -11,9 +11,9 @@ const defaults = {
 }
 
 /**
- * TLA Keycloak Helper.
+ * Keycloak Helper.
  * 
- * Set of middleware / request handlers for protecting endpoints with the TLA Keycloak instance.
+ * Set of middleware / request handlers for protecting endpoints with a Keycloak instance.
  */
 module.exports = {
 

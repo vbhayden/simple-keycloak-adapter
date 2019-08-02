@@ -1,5 +1,5 @@
 {
-  "name": "tla-keycloak-adapter",
+  "name": "simple-keycloak-adapter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbhayden/tla-keycloak-adapter.git"
+    "url": "git+https://github.com/vbhayden/simple-keycloak-adapter.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vbhayden/tla-keycloak-adapter/issues"
+    "url": "https://github.com/vbhayden/simple-keycloak-adapter/issues"
   },
-  "homepage": "https://github.com/vbhayden/tla-keycloak-adapter#readme",
+  "homepage": "https://github.com/vbhayden/simple-keycloak-adapter#readme",
   "dependencies": {
     "express-session": "^1.16.2",
     "keycloak-connect": "^6.0.1"
