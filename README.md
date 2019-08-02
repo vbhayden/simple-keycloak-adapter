@@ -2,9 +2,9 @@
 This is a Node module to streamline Keycloak integration Node+Express based services.  It's intended to abstract some of the boilerplate necessary to protect Express endpoints when using a Keycloak instance for SSO, but does still require some configuration to specify which instance to target.
 
 ### Installation
-While this isn't on NPM directly, you can install it through this repo:
+Edit, this is now on NPM!
 ```
-npm install https://github.com/vbhayden/simple-keycloak-adapter --save
+npm install simple-keycloak-adapter --save
 ```
 
 ### Setup
