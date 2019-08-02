@@ -8,7 +8,7 @@ npm install simple-keycloak-adapter --save
 ```
 
 ### Setup
-Setup will depend on which Keycloak client you are using to protect your endpoints.  Assuming you're using a client called `my-client` on some realm `my-realm` running locally on port `8080`, your first step will be something like:
+Setup will depend on which Keycloak client you are using to protect your endpoints.  Each Keycloak client has an installation JSON file whose corresponding object you can just drop into this.  Assuming you're using a client called `my-client` on some realm `my-realm` running locally on port `8080`, your first step will be something like:
 
 ```
 const keycloakHelper = require("simple-keycloak-adapter");
