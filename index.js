@@ -35,6 +35,7 @@ module.exports = {
      * @property {string} client - (Alias for "resource") Name of the Keycloak client.
      * @property {boolean} publicClient - (Alias for "public-client") Is this a public client? Default: true
      * @property {number} confidentialPort - (Alias for "confidential-port") Not sure what this does, set to 0. Default: 0
+     * @property {string} redirectProtocol - (Custom Property) Specify which protocol to use for the redirect_uri argument.
      */
 
     /**
@@ -89,12 +90,21 @@ module.exports = {
     },
 
     /**
+     * Object defining what Keycloak instance our adapter should target and how.
+     * 
+     * @typedef {Object} RedirectConfig 
+     * @property {string} protocol - Specify which protocol to use for the redirect_uri argument.
+     */
+    /**
      * Requires a Keycloak login for anything accessing this resource.  Upon login, the
      * response object will contain the Keycloak user's information in res.locals.user.
      * 
      * That object has the following properties: id, name, admin, and author.
+     * 
+     * @param {RedirectConfig} config 
+     * @returns {RequestHandler} handlers
      */
-    protect: function() {
+    protect: function(config) {
         return (req, res, next) => {
             function confirmRoles(token, request) {
 
@@ -108,7 +118,12 @@ module.exports = {
                 return true;
             }
 
-            keycloak.protect(confirmRoles)(req, res, next);
+            let reqOverride = {
+                ...req,
+                protocol: (config.protocol || req.protocol)
+            }
+
+            keycloak.protect(confirmRoles)(reqOverride, res, next);
         }
     }
 }
