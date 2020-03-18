@@ -118,8 +118,14 @@ module.exports = {
                 return true;
             }
 
+            
+
             let reqOverride = {
                 ...req,
+
+                hostname: req.hostname,
+                originalUrl: req.originalUrl,
+
                 protocol: (config.protocol || req.protocol)
             }
 
