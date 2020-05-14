@@ -118,7 +118,8 @@ module.exports = {
                 return true;
             }
 
-            
+            if (config == undefined)
+                config = {}
 
             let reqOverride = {
                 ...req,
