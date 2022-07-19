@@ -118,17 +118,21 @@ module.exports = {
                 return true;
             }
 
-            
+            if (config == undefined)
+                config = {}
 
             let reqOverride = {
-                ...req,
-
+                
+                params: req.params,
+                headers: req.headers,
                 hostname: req.hostname,
                 originalUrl: req.originalUrl,
 
-                protocol: (config.protocol || req.protocol)
-            }
-
+                protocol: (config.protocol || req.protocol),
+                
+                ...req,
+            };
+            
             keycloak.protect(confirmRoles)(reqOverride, res, next);
         }
     }
